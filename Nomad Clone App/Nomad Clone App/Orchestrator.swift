@@ -13,7 +13,8 @@ final class Orchestrator: UIViewController {
         super.viewDidLoad()
         
         OperationQueue.main.addOperation { [weak self] in // referencia de memoria
-            self?.gotoSignIn() //pegar o gotosigin da orchestrator
+            guard let self = self else {return} // verificador
+            self.gotoSignIn() //pegar o gotosigin da orchestrator
         }
         
     
