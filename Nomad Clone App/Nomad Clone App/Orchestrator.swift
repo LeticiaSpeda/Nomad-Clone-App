@@ -12,7 +12,7 @@ final class Orchestrator: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        OperationQueue.main.addOperation { [weak self] in // referencia de memoria
+        OperationQueue.main.addOperation { [weak self] in // referencia de memoria (weak evita vazamento)
             guard let self = self else {return} // verificador
             self.gotoSignIn() //pegar o gotosigin da orchestrator
         }

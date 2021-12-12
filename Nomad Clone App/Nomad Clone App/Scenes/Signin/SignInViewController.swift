@@ -41,9 +41,9 @@ final class SignInViewController: UIViewController {
     }
     
     private func configureConstrints(){ //configurando as constraints (deixar na posicao)
-        nomadLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant:20).isActive = true
+        nomadLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
         nomadLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        nomadLogo.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        nomadLogo.widthAnchor.constraint(equalToConstant: 120).isActive = true
         nomadLogo.heightAnchor.constraint(lessThanOrEqualToConstant: 50).isActive = true
     }
     
