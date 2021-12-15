@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524600022768B2DF001D306B /* NomadCustomTextFieldStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524600012768B2DF001D306B /* NomadCustomTextFieldStackView.swift */; };
 		528D429C2763764400552D7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D429B2763764400552D7F /* AppDelegate.swift */; };
 		528D429E2763764400552D7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D429D2763764400552D7F /* SceneDelegate.swift */; };
 		528D42A52763764700552D7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528D42A42763764700552D7F /* Assets.xcassets */; };
 		528D42A82763764700552D7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528D42A62763764700552D7F /* LaunchScreen.storyboard */; };
 		52AA8B4C2763855000CC87C6 /* Orchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA8B4B2763855000CC87C6 /* Orchestrator.swift */; };
 		52AA8B4E2763884A00CC87C6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA8B4D2763884A00CC87C6 /* SignInViewController.swift */; };
+		52D9E3972768CC1D00C5D5C9 /* CustomBaseViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E3962768CC1D00C5D5C9 /* CustomBaseViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		524600012768B2DF001D306B /* NomadCustomTextFieldStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadCustomTextFieldStackView.swift; sourceTree = "<group>"; };
 		528D42982763764400552D7F /* Nomad Clone App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nomad Clone App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		528D429B2763764400552D7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		528D429D2763764400552D7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		528D42A92763764700552D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52AA8B4B2763855000CC87C6 /* Orchestrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orchestrator.swift; sourceTree = "<group>"; };
 		52AA8B4D2763884A00CC87C6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		52D9E3962768CC1D00C5D5C9 /* CustomBaseViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBaseViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		524600002768B229001D306B /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				524600012768B2DF001D306B /* NomadCustomTextFieldStackView.swift */,
+				52D9E3962768CC1D00C5D5C9 /* CustomBaseViewLayout.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		528D428F2763764400552D7F = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				52AA8B4B2763855000CC87C6 /* Orchestrator.swift */,
+				524600002768B229001D306B /* Commons */,
 				52AA8B492763842A00CC87C6 /* Scenes */,
 				528D42B127637A0400552D7F /* Defaults */,
 				528D42A92763764700552D7F /* Info.plist */,
@@ -163,7 +177,9 @@
 			files = (
 				52AA8B4E2763884A00CC87C6 /* SignInViewController.swift in Sources */,
 				528D429C2763764400552D7F /* AppDelegate.swift in Sources */,
+				52D9E3972768CC1D00C5D5C9 /* CustomBaseViewLayout.swift in Sources */,
 				52AA8B4C2763855000CC87C6 /* Orchestrator.swift in Sources */,
+				524600022768B2DF001D306B /* NomadCustomTextFieldStackView.swift in Sources */,
 				528D429E2763764400552D7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
