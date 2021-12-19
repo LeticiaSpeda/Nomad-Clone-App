@@ -1,4 +1,4 @@
-import UIKit
+import SnapKit
 
 final class SignInViewController: NomadaCustomViewController {
     
@@ -21,10 +21,11 @@ final class SignInViewController: NomadaCustomViewController {
     
     
     private lazy var passwordStackView = NomadCustomTextFieldStackView(
-        titleStacktext: "Insira sua senha",
+        titleStacktext: "Insira sua senha de 8 caracteres",
         placeholderText: "Sua senha",
         buttomTitle: "Esqueceu?",
-        shouldDisplayButtom: true //aparecer botao
+        shouldDisplayButtom: true, //aparecer botao
+        isSecure: true
     )
     
     private lazy var accessAccountButton: UIButton = {
@@ -60,6 +61,7 @@ final class SignInViewController: NomadaCustomViewController {
     override func viewDidLoad() {
         super.viewDidLoad() //tela carrega
         commomInit() //chama essa funcao
+        view.backgroundColor = .white
     }
     
     //MARK: - Helpers
@@ -79,32 +81,35 @@ final class SignInViewController: NomadaCustomViewController {
     }
     
     func configureConstraint() {
-        nomadLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
-        nomadLogo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        nomadLogo.widthAnchor.constraint(equalToConstant: 120).isActive = true
-        nomadLogo.heightAnchor.constraint(lessThanOrEqualToConstant: 50).isActive = true
-
-            
-           
-        maisStackview.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        maisStackview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        maisStackview.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-            
-        createAccountLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -15).isActive = true
-        createAccountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        accessAccountButton.bottomAnchor.constraint(equalTo: createAccountLabel.topAnchor, constant: -20).isActive = true
-        accessAccountButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        accessAccountButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        accessAccountButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        nomadLogo.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)  //$0 representa o objeto
+            $0.centerX.equalTo(view.snp.centerX)
+            $0.width.equalTo(120)
+            $0.height.equalTo(50)
         }
         
+        maisStackview.snp.makeConstraints {
+            $0.centerY.equalTo(view.snp.centerY)
+            $0.leading.equalTo(view.snp.leading).offset(20)
+            $0.trailing.equalTo(view.snp.trailing).offset(-20)
+        }
+        createAccountLabel.snp.makeConstraints {
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-15)
+            $0.centerX.equalTo(view.snp.centerX)
+        }
+        accessAccountButton.snp.makeConstraints {
+            $0.bottom.equalTo(createAccountLabel.snp.top).offset(-20)
+            $0.leading.equalTo(view.snp.leading).offset(20)
+            $0.trailing.equalTo(view.snp.trailing).offset(-20)
+            $0.height.equalTo(50)
+        }
         
        func configureStyle() { //configurando estilo da tela
             self.view.backgroundColor = .white
         }
-    } // final codigo
-    
-    
-    
+        
+    }
         
 
+}

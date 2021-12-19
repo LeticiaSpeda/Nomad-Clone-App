@@ -8,6 +8,7 @@ final class NomadCustomTextFieldStackView: UIStackView {
     private let buttomTitle: String
     
     private let shouldDisplayButtom: Bool
+    private let isSecure: Bool
     
     
     
@@ -23,7 +24,7 @@ final class NomadCustomTextFieldStackView: UIStackView {
     private lazy var passwordTextFild: UITextField = {
         let tf = UITextField()
         tf.placeholder = placeholderText
-        tf.isSecureTextEntry = true
+        tf.isSecureTextEntry = isSecure
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
         
@@ -51,11 +52,12 @@ final class NomadCustomTextFieldStackView: UIStackView {
     }()
     
     init(titleStacktext: String, placeholderText: String, //inicializador
-         buttomTitle: String = "", shouldDisplayButtom: Bool = false ) {
+         buttomTitle: String = "", shouldDisplayButtom: Bool = false , isSecure: Bool = false) {
         self.titleStacktext = titleStacktext
         self.placeholderText = placeholderText
         self.buttomTitle = buttomTitle
         self.shouldDisplayButtom = shouldDisplayButtom
+        self.isSecure = isSecure
         super.init(frame: .zero)
         
         commomInit()

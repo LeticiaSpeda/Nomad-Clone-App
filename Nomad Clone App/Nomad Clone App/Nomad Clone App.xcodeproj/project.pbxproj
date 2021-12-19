@@ -15,11 +15,9 @@
 		52AA8B4C2763855000CC87C6 /* Orchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA8B4B2763855000CC87C6 /* Orchestrator.swift */; };
 		52AA8B4E2763884A00CC87C6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA8B4D2763884A00CC87C6 /* SignInViewController.swift */; };
 		52D9E3972768CC1D00C5D5C9 /* CustomBaseViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9E3962768CC1D00C5D5C9 /* CustomBaseViewLayout.swift */; };
-		9EA1489914E5810EC8B525FD /* Pods_Nomad_Clone_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 731B441D1220B272AA4456E8 /* Pods_Nomad_Clone_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09EE579AE46625E69C1F47F2 /* Pods-Nomad Clone App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nomad Clone App.release.xcconfig"; path = "Target Support Files/Pods-Nomad Clone App/Pods-Nomad Clone App.release.xcconfig"; sourceTree = "<group>"; };
 		524600012768B2DF001D306B /* NomadCustomTextFieldStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadCustomTextFieldStackView.swift; sourceTree = "<group>"; };
 		528D42982763764400552D7F /* Nomad Clone App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nomad Clone App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		528D429B2763764400552D7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,8 +28,6 @@
 		52AA8B4B2763855000CC87C6 /* Orchestrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orchestrator.swift; sourceTree = "<group>"; };
 		52AA8B4D2763884A00CC87C6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		52D9E3962768CC1D00C5D5C9 /* CustomBaseViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBaseViewLayout.swift; sourceTree = "<group>"; };
-		731B441D1220B272AA4456E8 /* Pods_Nomad_Clone_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nomad_Clone_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F52337EA92D7EFDEB35693A7 /* Pods-Nomad Clone App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nomad Clone App.debug.xcconfig"; path = "Target Support Files/Pods-Nomad Clone App/Pods-Nomad Clone App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,21 +35,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EA1489914E5810EC8B525FD /* Pods_Nomad_Clone_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13389B5E5DB32225CCA57192 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				731B441D1220B272AA4456E8 /* Pods_Nomad_Clone_App.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		524600002768B229001D306B /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +55,6 @@
 			children = (
 				528D429A2763764400552D7F /* Nomad Clone App */,
 				528D42992763764400552D7F /* Products */,
-				6B2B2C43313EAEFA3635631C /* Pods */,
-				13389B5E5DB32225CCA57192 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,16 +105,6 @@
 			path = Signin;
 			sourceTree = "<group>";
 		};
-		6B2B2C43313EAEFA3635631C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F52337EA92D7EFDEB35693A7 /* Pods-Nomad Clone App.debug.xcconfig */,
-				09EE579AE46625E69C1F47F2 /* Pods-Nomad Clone App.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,11 +112,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 528D42AC2763764700552D7F /* Build configuration list for PBXNativeTarget "Nomad Clone App" */;
 			buildPhases = (
-				A59C0ED187D87E5F6447083F /* [CP] Check Pods Manifest.lock */,
 				528D42942763764400552D7F /* Sources */,
 				528D42952763764400552D7F /* Frameworks */,
 				528D42962763764400552D7F /* Resources */,
-				7DA3AB656E69EFFF865A9A68 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,48 +169,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7DA3AB656E69EFFF865A9A68 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Nomad Clone App/Pods-Nomad Clone App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Nomad Clone App/Pods-Nomad Clone App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nomad Clone App/Pods-Nomad Clone App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A59C0ED187D87E5F6447083F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Nomad Clone App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		528D42942763764400552D7F /* Sources */ = {
@@ -383,7 +314,6 @@
 		};
 		528D42AD2763764700552D7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F52337EA92D7EFDEB35693A7 /* Pods-Nomad Clone App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -402,7 +332,6 @@
 		};
 		528D42AE2763764700552D7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09EE579AE46625E69C1F47F2 /* Pods-Nomad Clone App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
