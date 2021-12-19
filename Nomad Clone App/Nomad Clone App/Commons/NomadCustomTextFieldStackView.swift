@@ -1,7 +1,16 @@
 
 import UIKit
 
+protocol NomadCustomTextFieldStackViewDelegate: AnyObject {
+    func updateTextField(text: String)
+}
+
+
 final class NomadCustomTextFieldStackView: UIStackView {
+    
+    //MARK: - Properties
+    
+    weak var delegate: NomadCustomTextFieldStackViewDelegate?
     
     private let titleStacktext: String //propriedades
     private let placeholderText: String
@@ -10,14 +19,13 @@ final class NomadCustomTextFieldStackView: UIStackView {
     private let shouldDisplayButtom: Bool
     private let isSecure: Bool
     
-    
+    //MARK: - UI Components
     
     private lazy var passwordTitlleLabel: UILabel = { //componentes
         let label = UILabel()
         label.text = titleStacktext
         label.textColor = .black
         label.font = .systemFont(ofSize: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -25,7 +33,7 @@ final class NomadCustomTextFieldStackView: UIStackView {
         let tf = UITextField()
         tf.placeholder = placeholderText
         tf.isSecureTextEntry = isSecure
-        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.delegate = self
         return tf
         
     }()
@@ -40,7 +48,6 @@ final class NomadCustomTextFieldStackView: UIStackView {
     private lazy var passwordBottomDividerView: UIView = {
         let view = UIView()
         view.backgroundColor = .black
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -50,6 +57,8 @@ final class NomadCustomTextFieldStackView: UIStackView {
         button.setTitleColor(.black, for: .normal)
         return button
     }()
+    
+    //MARK: - Constructor
     
     init(titleStacktext: String, placeholderText: String, //inicializador
          buttomTitle: String = "", shouldDisplayButtom: Bool = false , isSecure: Bool = false) {
@@ -73,7 +82,18 @@ final class NomadCustomTextFieldStackView: UIStackView {
 //        configureConstraints()
 //        configureStyle()
     
+    
+    func getTfText() -> String {
+        return passwordTextFild.text ?? " "
+    }
+    
+    
 } // final do codigo
+
+
+
+
+//MARK: - CustomBaseViewLayout
 
 extension NomadCustomTextFieldStackView: CustomBaseViewLayout{
     func configureViewHierarchy() {
@@ -90,17 +110,21 @@ extension NomadCustomTextFieldStackView: CustomBaseViewLayout{
     }
     
     func configureConstraint() {
-        passwordTextFild.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        passwordBottomDividerView.heightAnchor.constraint(equalToConstant: 1).isActive =  true
-        forgoPasswordButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
-    }
+        passwordTextFild.snp.makeConstraints {$0.height.equalTo(50)}
+        passwordBottomDividerView.snp.makeConstraints {$0.height.equalTo(1)}
+        forgoPasswordButton.snp.makeConstraints {$0.width.equalTo(100)}
+   }
      
     func configureStyle(){
          spacing = 5
          axis = .vertical
-         translatesAutoresizingMaskIntoConstraints = false
      }
 }
-extension NomadCustomTextFieldStackView: UITableViewDelegate{
-    
+extension NomadCustomTextFieldStackView: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        delegate?.updateTextField(text: textField.text ?? " ")
+    }
 }
+    
+
+
