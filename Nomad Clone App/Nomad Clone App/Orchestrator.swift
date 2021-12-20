@@ -21,7 +21,7 @@ final class Orchestrator: UIViewController {
     }
     
     private func gotoSignIn() {  //apresentar tela modelo modal
-        let viewController = SignInViewController()
+        let viewController = SignInSViewController()
         viewController.modalPresentationStyle = .fullScreen //cobrir a tela vermelha inteira 
         present(viewController, animated: true, completion: nil)
     }
